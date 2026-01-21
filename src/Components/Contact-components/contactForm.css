@@ -1,0 +1,124 @@
+.contact_form{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+}
+
+.contact_form-name{
+    width: 80%;
+    height: 45px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    background: #3333333f;
+    outline: none;
+    border: none;
+    border: 2px solid #000000 ;
+    border-radius: 20px;
+    color: #fff;
+    
+}
+.contact_form-name:hover{
+    border: 2px solid #cec112 ;
+    animation: inputFocus 0.1s forwards linear;
+}
+
+.contact_form-name:focus{
+    border: 2px solid #cec112 ;
+}   
+
+.contact_form-email{
+    width: 80%;
+    height: 45px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    background: #3333333f;
+    outline: none;
+    border: none;
+    border: 2px solid #000000 ;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.contact_form-email:hover{
+    border: 2px solid #cec112 ;
+    animation: inputFocus 0.1s forwards linear;
+}
+
+.contact_form-email:focus{
+    border: 2px solid #cec112 ;
+}
+
+.contact_form-message{
+    width: 80%;
+    height: 120px;
+    resize: none;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    line-height: 22px;
+    font-size: 20px;
+    background: #3333333f;
+    outline: none;
+    border: none;
+    border: 2px solid #000000 ;
+    border-radius: 20px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.contact_form-message:hover{
+    border: 2px solid #cec112 ;
+    animation: inputFocus 0.1s forwards linear;
+}
+
+.contact_form-message:focus{
+    border: 2px solid #cec112 ;
+}
+
+.contact_form-submit{
+    font-family:  Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: #111;
+    font-size: 20px;
+    width: max-content;
+    text-align: center;
+    height: 35px;
+    padding:0 10px;
+    padding-bottom: 3px;
+    background: #cec112;
+    border-radius: 5%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    
+}
+
+.contact_form-submit:hover{
+    background: #887f01;
+}
+
+.error-mesage{
+    color: rgb(218, 20, 20);
+}
+
+
+@keyframes inputFocus {
+    0%{
+       transform: scale(1); 
+       translate: 0px;
+    }
+    100%{
+        transform: scale(1.04);
+        translate: 0px -6px;
+    }
+}

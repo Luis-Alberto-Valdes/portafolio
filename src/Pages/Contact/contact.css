@@ -1,0 +1,11 @@
+.main-contact{
+    width: 98%;
+    min-height: 90vh ;
+    margin: auto;
+    border: 5px solid #000;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+  }

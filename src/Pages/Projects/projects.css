@@ -1,0 +1,14 @@
+  .main-projects{
+    padding: 6px;
+    width: 98%;
+    min-height: 90vh;
+    margin: auto;
+    border: 5px solid #000;
+    background: #222;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(280px,max-content);
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
