@@ -10,7 +10,7 @@ export default function Header () {
   return (
     <header className='header'>
       <div className='header_redes'>
-        <a className='link-icons  git-hub' target='blank' href='https://github.com/Tu-Abuelo/'><GitIcon className='icons-header' /></a>
+        <a className='link-icons  git-hub' target='blank' href='https://github.com/Luis-Alberto-Valdes/'><GitIcon className='icons-header' /></a>
         <a className='link-icons linkedin' target='blank' href=''><LinkedinIcon className='icons-header' /></a>
       </div>
       <div className=' header_nav-container'>

@@ -9,7 +9,12 @@
 .about_skills-title{
     margin: auto;
     font-size: 45px;
-    color: #cec112;
+    background: linear-gradient(135deg, #cec112 0%, #e6d700 100%, #cec112 200%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .about_skills-container{
@@ -22,9 +27,29 @@
 .about_skills-items{
     width: 70px;
     height: 70px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(206, 193, 18, 0.1) 0%, rgba(206, 193, 18, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about_skills-items:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(206, 193, 18, 0.4);
+    background: linear-gradient(135deg, rgba(206, 193, 18, 0.2) 0%, rgba(206, 193, 18, 0.1) 100%);
 }
 
 .about_skills-items > img {
     width: 100%;
     height: 100%;
+    transition: all 0.3s ease;
+}
+
+.about_skills-items:hover > img {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(206, 193, 18, 0.5));
 }
