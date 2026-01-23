@@ -31,6 +31,7 @@
     display: flex;
     width: auto;
     padding: 2px;
+    z-index: 2;
 }
 
 .projects_img{
