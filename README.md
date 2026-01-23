@@ -1,9 +1,16 @@
-Welcome to my personal portfolio website! This project showcases my skills, projects, and experience as a web developer.
+# Portfolio
 
+Portfolio where I showcase my projects and experience
 
-About Section: A brief introduction to my background, skills, and interests.                                              
-Contact Section: Easy way for visitors to get in touch.                                         
-Projects Section: Projects with technologies used, and links to live demos or repositories.                            
+## How to visit
 
+https://0personalportfolio0.netlify.app/portafolio
 
-Check out the live version here: https://tu-abuelo.github.io/portafolio/
+# Content
+In it, you will find different sections:
+
+About Me: A section where I talk about my skills and give a brief description about myself.
+
+Projects: A section where I showcase some of my projects available to view on GitHub.
+
+Contact: A section to contact me via email. Just leave your name, your email, and your message, and I will contact you back.
