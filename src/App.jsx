@@ -1,23 +1,26 @@
 import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home/Home'
+import { Suspense, lazy } from 'react'
 import Header from './Components/Header/Header'
-import Projects from './Pages/Projects/Projects'
-import About from './Pages/About Me/About'
-import Contact from './Pages/Contact/Contact'
+
+const Home = lazy(() => import('./Pages/Home/Home'))
+const Projects = lazy(() => import('./Pages/Projects/Projects'))
+const About = lazy(() => import('./Pages/About Me/About'))
+const Contact = lazy(() => import('./Pages/Contact/Contact'))
 
 function App () {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path='/portafolio' element={<Home />} />
-        <Route path='/portafolio/projects' element={<Projects />} />
-        <Route path='/portafolio/about' element={<About />} />
-        <Route path='/portafolio/contact' element={<Contact />} />
-        <Route path='*' element={<Navigate to='/portafolio' />} />
-      </Routes>
-
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<Navigate to='/' />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

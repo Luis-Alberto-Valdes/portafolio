@@ -6,6 +6,9 @@ import nodeImg from './icons/Nodejs.svg'
 import gitImg from './icons/Git.svg'
 import linkedinImg from './icons/Linkedin.svg'
 import menuBoton from './icons/MenuBoton.svg'
+import nextJsImg from './icons/NextJs.svg'
+import sql from './icons/sql.svg'
+import typescript from './icons/typescript.svg'
 
 export function MenuBotonIcon () {
   return <div className='icons'><img src={menuBoton} alt={menuBoton} /></div>
@@ -37,4 +40,16 @@ export function GitIcon () {
 
 export function LinkedinIcon () {
   return <div className='icons'> <img src={linkedinImg} alt={linkedinImg} /></div>
+}
+
+export function NextJsIcon () {
+  return <div className='icons'> <img src={nextJsImg} alt={nextJsImg} /></div>
+}
+
+export function SqlIcon () {
+  return <div className='icons'> <img src={sql} alt={sql} /></div>
+}
+
+export function TypescriptIcon () {
+  return <div className='icons'> <img src={typescript} alt={typescript} /></div>
 }

@@ -1,23 +1,19 @@
 import './description.css'
-import { useState } from 'react'
-import { languaje } from './descriptionLanguaje.js'
 
 export default function Description () {
-  const [lang, setLang] = useState(languaje.en)
-
   return (
     <>
       <section className='description-container'>
-        <h2 className='description-title'>Description</h2>
+        <h2 className='description-title'>Descripcion</h2>
         <p className='description-text'>
-          <button
-            className='description-btn' onClick={() => {
-              if (lang === languaje.es) setLang(languaje.en)
-              if (lang === languaje.en) setLang(languaje.es)
-            }}
-          > {lang === languaje.es ? 'Change to english' : 'Cambiar a español'}
-          </button>
-          {lang.description}
+          Me llamo Luis Alberto Valdes y soy Desarrollador Web Fullstack Junior.
+          Conozco el funcionamiento de una web de extremo a extremo
+          y me especializo en el ecosistema <strong>JavaScript </strong>
+          con <strong>React/Next.js</strong> para el frontend y <strong>Node.js</strong> con <strong>Express</strong> para el backend.
+          Estoy familiarizado con herramientas de código con IA para optimizar procesos
+          y cuento con conocimientos básicos en <strong>SQL</strong> y <strong>Testing</strong> con <strong>Playwright</strong>.
+          Trabajo bajo modalidad Freelance / Contractor,
+          facilitando la contratación internacional mediante facturación B2B.
         </p>
       </section>
     </>

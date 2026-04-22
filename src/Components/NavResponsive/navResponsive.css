@@ -11,6 +11,7 @@
     border: 1px solid rgba(206, 193, 18, 0.3);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    z-index: 100;
 }
 .header_nav_ul-responsive{
     width: 100%;

@@ -6,21 +6,21 @@ const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/u
 const contactSchema = z.object({
   nombre: z
     .string()
-    .nonempty({ message: 'Name is required.' })
-    .min(2, { message: 'Name is too short.' })
-    .refine((val) => nameRegex.test(val), { message: 'Name can only contain letters and spaces.' }),
+    .nonempty({ message: 'El nombre es requerido.' })
+    .min(2, { message: 'El nombre es demasiado corto.' })
+    .refine((val) => nameRegex.test(val), { message: 'El nombre solo puede contener letras y espacios.' }),
 
   email: z
     .string()
-    .nonempty({ message: 'Email is required.' })
-    .refine((v) => /^\S+@\S+\.\S+$/.test(v), { message: 'Enter a valid email address.' }),
+    .nonempty({ message: 'El email es requerido.' })
+    .refine((v) => /^\S+@\S+\.\S+$/.test(v), { message: 'Ingrese una dirección de email válida.' }),
 
   mensaje: z
     .string()
-    .nonempty({ message: 'Message is required.' })
-    .min(5, { message: 'Message is too short.' })
-    .max(2000, { message: 'Message is too long.' })
-    .refine((val) => !/<script\b[^>]*>([\s\S]*?)<\/script>/i.test(val), { message: 'Message contains disallowed content.' })
+    .nonempty({ message: 'El mensaje es requerido.' })
+    .min(5, { message: 'El mensaje es demasiado corto.' })
+    .max(2000, { message: 'El mensaje es demasiado largo.' })
+    .refine((val) => !/<script\b[^>]*>([\s\S]*?)<\/script>/i.test(val), { message: 'El mensaje contiene contenido no permitido.' })
 })
 
 /**

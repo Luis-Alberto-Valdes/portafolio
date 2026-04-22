@@ -38,14 +38,14 @@ export default function ContactForm () {
 
       const data = await response.json().catch(() => ({}))
       if (response.ok) {
-        setSuccessMessage('Message sent successfully.')
+        setSuccessMessage('Mensage enviado correctamente.')
         setForm({ nombre: '', email: '', mensaje: '' })
       } else {
-        const serverError = data?.errors?.[0]?.message || data?.message || 'Submission failed.'
+        const serverError = data?.errors?.[0]?.message || data?.message || 'Envio fallido.'
         setErrors({ _form: serverError })
       }
     } catch (err) {
-      setErrors({ _form: 'Network error. Please try again later.' })
+      setErrors({ _form: 'Error al enviar el mensaje intentelo dnuevo mas tarde.' })
     } finally {
       setSubmitting(false)
     }
@@ -55,25 +55,25 @@ export default function ContactForm () {
     <form
       id='contact-form'
       ref={formRef}
-      action='https://formspree.io/f/xovqayag'
+      action='https://formspree.io/f/mbdqzwze'
       method='POST'
       className='contact_form'
       onSubmit={handleSubmit}
     >
       <input
         className='contact_form-name'
-        placeholder='Your Name'
+        placeholder='Tu nombre'
         type='text'
         name='nombre'
         value={form.nombre}
         onChange={handleChange}
-        autoComplete='name'
+        autoComplete='nombre'
       />
       <small className='error-mesage'>{errors.nombre || ''}</small>
 
       <input
         className='contact_form-email'
-        placeholder='Your Email'
+        placeholder='tu@email.com'
         type='email'
         name='email'
         value={form.email}
@@ -83,7 +83,7 @@ export default function ContactForm () {
 
       <textarea
         className='contact_form-message'
-        placeholder='Your message'
+        placeholder='Tu mensaje'
         rows={5}
         name='mensaje'
         value={form.mensaje}
@@ -95,7 +95,7 @@ export default function ContactForm () {
       <small style={{ color: 'green' }}>{successMessage}</small>
 
       <button type='submit' className='contact_form-submit' disabled={submitting}>
-        {submitting ? 'Sending...' : 'Send'}
+        {submitting ? 'Enviando...' : 'Enviar'}
       </button>
 
       <input type='hidden' name='_captcha' value='false' />

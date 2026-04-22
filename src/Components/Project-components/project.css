@@ -1,45 +1,53 @@
-.projects{
+.projects {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    outline: 4px solid rgba(206, 193, 18, 0.2);
-    border-radius: 8px;
+    background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+    outline: var(--border-width) solid rgba(206, 193, 18, 0.2);
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-md);
 }
 
 .projects:hover {
     transform: translateY(-8px);
-    outline: 4px solid rgba(206, 193, 18, 0.5);
+    outline: var(--border-width) solid rgba(206, 193, 18, 0.5);
     box-shadow: 0 8px 30px rgba(206, 193, 18, 0.3), 0 0 20px rgba(206, 193, 18, 0.1);
 }
 
-.projects_img-container{
+.projects:focus-within {
+    outline: 2px solid var(--color-accent-primary);
+}
+
+.projects_img-container {
     width: 100%;
     height: 80%;
     position: relative;
+    overflow: hidden;
 }
 
-.projects_tecnologies{
+.projects_tecnologies {
     position: absolute;
     right: 0;
-    background: #111111f3;
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
     display: flex;
     width: auto;
-    padding: 2px;
+    padding: var(--space-xs);
     z-index: 2;
+    gap: var(--space-xs);
+    transition: var(--transition-normal);
 }
 
-.projects_img{
+.projects_img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    aspect-ratio: 16/9;
-    transition: all 0.4s ease;
+    aspect-ratio: 16 / 9;
+    transition: var(--transition-normal);
     filter: brightness(0.9);
 }
 
@@ -47,24 +55,97 @@
     filter: brightness(1.1) saturate(1.1);
 }
 
-.projects_description{
+.projects_description {
     margin: 0;
     height: 20%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    gap: var(--space-md);
 }
-.projects_description > a{
-    color: #cec112;
-    font-size: 25px;
+
+.projects_decription-name {
+    color: var(--color-accent-primary);
+    font-size: var(--font-size-lg);
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    transition: all 0.3s ease;
+    align-items: center;
+    transition: var(--transition-normal);
     cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    flex: 1;
 }
 
 .projects_description > a:hover {
-    color: #e6d700;
+    color: var(--color-accent-light);
     filter: drop-shadow(0 0 8px rgba(206, 193, 18, 0.6));
-    transform: scale(1.15);
+}
+
+.projects_description > a:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+}
+
+.projects_description-icon {
+    font-size: var(--font-size-md);
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: var(--transition-normal);
+    color: var(--color-accent-primary);
+}
+
+.projects_description-icon > .icons {
+    width: 40px;
+    height: 40px;
+    transition: var(--transition-normal);
+}
+
+.projects_description-icon > .icons:hover {
+    filter: drop-shadow(0 0 8px rgba(206, 193, 18, 0.6));
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .projects,
+    .projects_img,
+    .projects_description-icon > .icons {
+        transition: none;
+    }
+}
+
+/* === TABLET === */
+@media (max-width: 992px) {
+    .projects_decription-name {
+        font-size: var(--font-size-lg);
+    }
+
+    .projects_description-icon > .icons {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+    .projects_description {
+        flex-direction: column;
+        gap: var(--space-sm);
+        padding: var(--space-md);
+        height: auto;
+    }
+
+    .projects_decription-name {
+        font-size: var(--font-size-md);
+        width: 100%;
+    }
+
+    .projects_description-icon {
+        width: 100%;
+        min-width: auto;
+    }
 }

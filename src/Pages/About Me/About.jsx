@@ -5,11 +5,9 @@ import Description from '../../Components/About-components/Description/Descripti
 
 export default function About () {
   return (
-    <>
-      <main className='main-about'>
-        <Skills />
-        <Description />
-      </main>
-    </>
+    <main className='main-about'>
+      <Description />
+      <Skills />
+    </main>
   )
 }
