@@ -8,7 +8,7 @@ import linkedinImg from './icons/Linkedin.svg'
 import menuBoton from './icons/MenuBoton.svg'
 import nextJsImg from './icons/NextJs.svg'
 import sql from './icons/sql.svg'
-import typescript from './icons/typescript.svg'
+import typescript from './icons/Typescript.svg'
 
 export function MenuBotonIcon () {
   return <div className='icons'><img src={menuBoton} alt={menuBoton} /></div>
