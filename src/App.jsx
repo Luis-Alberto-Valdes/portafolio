@@ -2,6 +2,7 @@ import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import Header from './Components/Header/Header'
+import LoadingSkeleton from './Components/loading'
 
 const Home = lazy(() => import('./Pages/Home/Home'))
 const Projects = lazy(() => import('./Pages/Projects/Projects'))
@@ -12,7 +13,7 @@ function App () {
   return (
     <>
       <Header />
-      <Suspense fallback={<div>Cargando...</div>}>
+      <Suspense fallback={<LoadingSkeleton />}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
