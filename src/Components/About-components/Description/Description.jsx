@@ -6,7 +6,7 @@ export default function Description () {
       <section className='description-container'>
         <h2 className='description-title'>Descripcion</h2>
         <p className='description-text'>
-          Me llamo Luis Alberto Valdes y soy Desarrollador Web Fullstack Junior.
+          Me llamo Luis Alberto Valdes y soy Desarrollador Web Fullstack.
           Conozco el funcionamiento de una web de extremo a extremo
           y me especializo en el ecosistema <strong>JavaScript </strong>
           con <strong>React/Next.js</strong> para el frontend y <strong>Node.js</strong> con <strong>Express</strong> para el backend.

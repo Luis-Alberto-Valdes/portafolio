@@ -3,13 +3,19 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
     outline: var(--border-width) solid rgba(206, 193, 18, 0.2);
     border-radius: var(--border-radius-lg);
-    overflow: hidden;
+    overflow: visible;
     transition: var(--transition-normal);
     box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 1;
+}
+
+.projects--active {
+    z-index: 10;
 }
 
 .projects:hover {
@@ -32,6 +38,7 @@
 .projects_tecnologies {
     position: absolute;
     right: 0;
+    bottom: 0;
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
@@ -48,6 +55,7 @@
     height: 100%;
     aspect-ratio: 16 / 9;
     transition: var(--transition-normal);
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0 ;
     filter: brightness(0.9);
 }
 
@@ -105,9 +113,33 @@
     transition: var(--transition-normal);
 }
 
-.projects_description-icon > .icons:hover {
+.projects_description-icon:hover, .projects_description-icon > .icons:hover {
     filter: drop-shadow(0 0 8px rgba(206, 193, 18, 0.6));
     transform: scale(1.1);
+}
+
+.project-info{
+    position: absolute;
+    top: 101%;
+    left: 0;
+    right: 0;
+    padding: var(--space-md);
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-lg);
+    z-index: 30;
+}
+
+.projects_description_button-info{
+    padding: var(--space-xs) var(--space-sm);
+    background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-light) 100%);
+    color: #111;
+    font-size: var(--font-size-sm);
+    border-radius: var(--border-radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    font-weight: var(--font-weight-medium);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,8 +2,10 @@ import './Loading.css'
 
 function LoadingSkeleton () {
   return (
-    <div className='loading-skeleton'>
-      <div className='skeleton-pulse' />
+    <div className='skeleton-container'>
+      <div className='loading-skeleton'>
+        <div className='skeleton-pulse' />
+      </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './header.css'
 import Nav from '../Nav/Nav'
 import NavResponsive from '../NavResponsive/NavResponsive'
@@ -19,7 +19,6 @@ export default function Header () {
     <header className='header' role='banner'>
       <div className='header_redes'>
         <a className='link-icons git-hub' target='_blank' rel='noopener noreferrer' href='https://github.com/Luis-Alberto-Valdes/'><GitIcon className='icons-header' aria-label='GitHub' /></a>
-        <a className='link-icons linkedin' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/luis-alberto-valdes-346030405/'><LinkedinIcon className='icons-header' aria-label='LinkedIn' /></a>
       </div>
       <div className='header_nav-container'>
         {isMobile
