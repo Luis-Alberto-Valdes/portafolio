@@ -5,6 +5,7 @@
 
 :root {
   font-family: 'Archivo', 'Space Grotesk', system-ui;
+  --font-family: 'Archivo', 'Space Grotesk', system-ui;
 
   /* === COLORS === */
   --color-bg-primary: #0a0a0a;
@@ -102,6 +103,25 @@ select:focus-visible,
 textarea:focus-visible {
   outline: 2px solid var(--color-accent-primary);
   outline-offset: 2px;
+}
+
+/* === PAGE TRANSITIONS === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-home,
+.main-about,
+.main-projects,
+.main-contact {
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 /* === REDUCED MOTION (Accessibility) === */

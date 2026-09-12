@@ -23,6 +23,7 @@ export default function Skills () {
             <div className='skill-icon'>
               <Icon />
             </div>
+            <span className='skill-label'>{label}</span>
           </li>
         ))}
       </ul>

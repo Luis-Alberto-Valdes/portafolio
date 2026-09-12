@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './header.css'
 import Nav from '../Nav/Nav'
 import NavResponsive from '../NavResponsive/NavResponsive'
-import { GitIcon, LinkedinIcon, MenuBotonIcon } from '../../assets/icons'
+import { GitIcon, MenuBotonIcon } from '../../assets/icons'
 
 export default function Header () {
   const [header, setHeader] = useState(false)

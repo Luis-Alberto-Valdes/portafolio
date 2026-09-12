@@ -4,7 +4,6 @@ import jsImg from './icons/Js.svg'
 import reactImg from './icons/React.svg'
 import nodeImg from './icons/Nodejs.svg'
 import gitImg from './icons/Git.svg'
-import linkedinImg from './icons/Linkedin.svg'
 import menuBoton from './icons/MenuBoton.svg'
 import nextJsImg from './icons/NextJs.svg'
 import sql from './icons/sql.svg'
@@ -36,10 +35,6 @@ export function NodeIcon () {
 
 export function GitIcon () {
   return <div className='icons'> <img src={gitImg} alt={gitImg} /></div>
-}
-
-export function LinkedinIcon () {
-  return <div className='icons'> <img src={linkedinImg} alt={linkedinImg} /></div>
 }
 
 export function NextJsIcon () {

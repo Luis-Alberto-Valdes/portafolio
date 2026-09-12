@@ -1,8 +1,6 @@
 import './home.css'
 
 export default function Home () {
-  // Usar enlace de descarga a PDF si existe (mejor compatibilidad para reclutadores)
-
   return (
     <>
       <main className='main-home'>

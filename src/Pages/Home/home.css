@@ -32,11 +32,13 @@
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
     color: transparent;
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px #000000;
-    background-image: linear-gradient(to left, #887801, #4d4400, rgb(24, 22, 0), rgb(24, 22, 0));
+    background-image: linear-gradient(to left, #887801, #4d4400, #181600, #887801);
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: move 15s linear infinite;
+    animation: move 6s linear infinite;
     line-height: var(--line-height-tight);
 }
 
@@ -106,11 +108,11 @@
 
 /* === Animaciones === */
 @keyframes move {
-    0% {
+    from {
         background-position: 0 0;
     }
-    100% {
-        background-position: 2000px 0;
+    to {
+        background-position: -200% 0;
     }
 }
 

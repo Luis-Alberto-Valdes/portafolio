@@ -7,7 +7,7 @@ export default function NavResponsive ({ onClose }) {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Sobre Mi', path: '/about' },
-    { label: 'Projectos', path: '/projects' },
+    { label: 'Proyectos', path: '/projects' },
     { label: 'Contacto', path: '/contact' }
   ]
 

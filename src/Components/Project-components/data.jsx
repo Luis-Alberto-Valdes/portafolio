@@ -8,8 +8,8 @@ const projects = [
   {
     src: Portfolio,
     name: 'Portfolio',
-    href: 'https://luis-alberto-valdes.netlify.app/portafolio',
-    repo: 'https://github.com/Luis-Alberto-Valdes/portafolio',
+    href: 'https://luis-alberto-valdes.netlify.app',
+    repo: 'https://github.com/Luis-Alberto-Valdes',
     description: 'Portafolio personal. Agrupa toda la informacion sobre mi y mis proyectos',
     tecn: [<CssIcon key='css' />, <JsIcon key='js' />, <ReactIcon key='react' />]
   },

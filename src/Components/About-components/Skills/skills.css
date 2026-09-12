@@ -56,6 +56,12 @@
     justify-content: center;
     transition: var(--transition-normal);
 }
+.skill-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-light);
+    text-align: center;
+    transition: var(--transition-normal);
+}
 
 .about_skills-items > .icons > img,
 .about_skills-items > .skill-icon > img,

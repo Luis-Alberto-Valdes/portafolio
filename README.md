@@ -4,7 +4,7 @@ Portfolio where I showcase my projects and experience
 
 ## How to visit
 
-https://0personalportfolio0.netlify.app/portafolio
+https://0personalportfolio0.netlify.app
 
 # Content
 In it, you will find different sections:
